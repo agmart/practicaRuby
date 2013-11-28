@@ -4,7 +4,7 @@ require_relative "contacto.rb"
 csv = CsvReader.new
 
 
-puts "A = Agregar\nE = Editar\nS = Buscar (por nombre)\nSA = Mostrar todos\nX = Salir"
+puts "A = Agregar\nE = Editar (no anda por ahora)\nS = Buscar (por nombre)\nSA = Mostrar todos\nX = Salir"
 
 loop do
     puts "Elija una opción (h para mostrar opciones)"
