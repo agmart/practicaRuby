@@ -1,3 +1,27 @@
+class Metros
+    attr_accessor :cant
+        
+    def initialize(cant)
+        @cant = cant
+    end
+    
+    def a_pies
+        Float (@cant * 3.2808)
+    end
+end
+
+class Pies
+    attr_accessor :cant
+    
+    def initialize(cant)
+        @cant = cant
+    end
+
+    def a_metros
+        Float (@cant / 3.2808)
+    end
+end
+
 puts "Convertir:\n
 1 - Feets a metros
 2 - Metros a feets\n\n"
@@ -8,15 +32,13 @@ case o
 when 1
     puts "Cantidad a convertir"
     size = Float(gets.chomp)
-
-    metros = Float (size/3.2808)
-    puts "%f pies son %f metros" %[size, metros]
+    p = Pies.new(size)
+    puts p.a_metros
 when 2
     puts "Cantidad a convertir"
     size = Float (gets.chomp)
-    
-    feets = Float (size*3.2808)
-    puts "%f metros son %f pies" %[size, feets]
+    m = Metros.new(size)
+    puts m.a_pies
 else
     puts "Opcion incorrecta"
 end
